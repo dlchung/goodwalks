@@ -5,7 +5,10 @@ import { fetchWeather } from '../actions/index';
 
 class WeatherView extends Component {
   componentDidMount() {
-    this.props.fetchWeather('raleigh');
+    const localCity = JSON.parse(localStorage.getItem('localCity')) ? JSON.parse(localStorage.getItem('localCity')) : "Raleigh";
+
+    // Get new weather data when the page is loaded
+    this.props.fetchWeather(localCity);
   }
 
   renderWeather(data) {
