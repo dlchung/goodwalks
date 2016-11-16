@@ -1,40 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../actions/index';
+import WeatherNow from './weather_now';
 
-class WeatherView extends Component {
-  componentDidMount() {
-    const localCity = JSON.parse(localStorage.getItem('localCity')) ? JSON.parse(localStorage.getItem('localCity')) : "Raleigh";
-
-    // Get new weather data when the page is loaded
-    this.props.fetchWeather(localCity);
-  }
-
-  renderWeather(data) {
-    console.log(data);
-    const cityName = data.city.name;
-
-    return (
-      <h1 key={cityName}>{cityName}</h1>
-    );
-  }
-
+export default class WeatherView extends Component {
   render() {
     return (
-      <div>
-        {this.props.weather.map(this.renderWeather)}
-      </div>
+        <WeatherNow />
     );
   }
 }
-
-function mapStateToProps({ weather }) {
-  return { weather };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchWeather }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(WeatherView);

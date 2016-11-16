@@ -3,3 +3,25 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+body.greatWeather { background-color: #709d6b; }
+body.hotWeather { background-color: #fbcc01; }
+body.coldWeather { background-color: #ccd7dd; }
+
+.weatherWrap {
+  margin: 0 auto;
+  padding-top: 30%;
+  text-align: center;
+}
+
+.weatherWrap .currentCity {
+  font-size: 1.4em;
+}
+
+.weatherWrap .currentTemp {
+  font-size: 1.8em;
+}
+
+.weatherWrap .walkStatus {
+  font-size: 2.2em;
+}
