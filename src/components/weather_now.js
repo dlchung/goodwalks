@@ -21,9 +21,9 @@ class WeatherNow extends Component {
     //const currentTempC = (data.main.temp - 273.15).toFixed();
 
     return (
-      <div key={cityName} className="weatherWrap">
-        <p className="currentCity">{cityName}</p>
-        <p className="currentTemp">{currentTempF}&deg;F</p>
+      <div key={cityName} className="weather-wrap">
+        <p className="current-city">{cityName}</p>
+        <p className="current-temp">{currentTempF}&deg;F</p>
         <GoodDay currentTemp={currentTempF} />
       </div>
     );

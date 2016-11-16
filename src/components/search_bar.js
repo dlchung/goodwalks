@@ -30,12 +30,12 @@ export default class SearchBar extends Component {
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
-        <label htmlFor="locationInput">Your Location:</label>
+        <label htmlFor="location-input">Your Location:</label>
         <div className="input-group">
           <input
             placeholder="U.S. City e.g. Raleigh"
             className="form-control"
-            id="locationInput"
+            id="location-input"
             value={this.state.location}
             onChange={this.onInputChange}
           />

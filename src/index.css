@@ -5,9 +5,9 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-body.greatWeather { background-color: #86c2a0; }
-body.hotWeather { background-color: #e7b685; }
-body.coldWeather { background-color: #afdde0; }
+body.great-weather { background-color: #86c2a0; }
+body.hot-weather { background-color: #e7b685; }
+body.cold-weather { background-color: #afdde0; }
 
 .root {
   position: relative;
@@ -22,7 +22,12 @@ body.coldWeather { background-color: #afdde0; }
   right: 0;
 }
 
-.weatherWrap {
+.settings-wrap {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.weather-wrap {
   height: 300px;
   margin: -150px 0 0 -350px;
   position: absolute;
@@ -32,18 +37,18 @@ body.coldWeather { background-color: #afdde0; }
   width: 700px;
 }
 
-.weatherWrap .currentCity {
+.weather-wrap .current-city {
   font-size: 2.5em;
   text-shadow: 1px 1px 2px #777;
 }
 
-.weatherWrap .currentTemp {
+.weather-wrap .current-temp {
   font-size: 4em;
   font-weight: bold;
   text-shadow: 1px 1px 2px #777;
 }
 
-.weatherWrap .walkStatus {
+.weather-wrap .walk-status {
   font-size: 3.6em;
   font-weight: bold;
   text-shadow: 1px 1px 2px #777;
