@@ -4,9 +4,9 @@ export default (props) => {
   const temp = props.currentTemp;
   const lowTemp = 50;
   const highTemp = 85;
-  const great = "great";
-  const hot = "hot";
-  const cold = "cold";
+  const great = "greatWeather";
+  const hot = "hotWeather";
+  const cold = "coldWeather";
   var walkStatus = "";
   var mood = "";
 
@@ -26,6 +26,8 @@ export default (props) => {
     walkStatus = statusCold;
     mood = cold;
   }
+
+  document.body.classList.add(`${mood}`);
 
   return (
       <p className="walkStatus">{walkStatus}</p>

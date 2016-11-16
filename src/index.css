@@ -1,27 +1,50 @@
 body {
+  color: #fff;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-body.greatWeather { background-color: #709d6b; }
-body.hotWeather { background-color: #fbcc01; }
-body.coldWeather { background-color: #ccd7dd; }
+body.greatWeather { background-color: #86c2a0; }
+body.hotWeather { background-color: #e7b685; }
+body.coldWeather { background-color: #afdde0; }
+
+.root {
+  position: relative;
+}
+
+.nav {
+  color: #fff;
+  font-size: 0.8em;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 .weatherWrap {
-  margin: 0 auto;
-  padding-top: 30%;
+  height: 300px;
+  margin: -150px 0 0 -350px;
+  position: absolute;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 700px;
 }
 
 .weatherWrap .currentCity {
-  font-size: 1.4em;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px #777;
 }
 
 .weatherWrap .currentTemp {
-  font-size: 1.8em;
+  font-size: 4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #777;
 }
 
 .weatherWrap .walkStatus {
-  font-size: 2.2em;
+  font-size: 3.6em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #777;
 }
