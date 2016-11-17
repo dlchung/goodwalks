@@ -15,7 +15,7 @@ export function moodColor(mood) {
       currentMood = cold;
       break;
     default:
-      currentMood = "";
+      currentMood = great;
       break;
   }
 
