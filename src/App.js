@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { moodColor } from './components/good_day';
+import { moodColor } from './components/mood_color';
 
 export default class App extends Component {
   render() {
