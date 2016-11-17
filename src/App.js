@@ -6,6 +6,7 @@ export default class App extends Component {
     return (
       <div>
         <div className="nav">
+          <Link to="/">Home</Link>
           <Link to="/settings">Settings</Link>
         </div>
         {this.props.children}

@@ -13,7 +13,6 @@ class WeatherNow extends Component {
   }
 
   renderWeather(data) {
-    console.log(data);
     const cityName = data.name;
 
     // Convert temperatures from Kelvin

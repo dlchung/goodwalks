@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -10,11 +10,6 @@ export default class SearchBar extends Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  static contextTypes = {
-    // context for router redirect
-    router: PropTypes.object
-  }
-
   onInputChange(event) {
     this.setState({ location: event.target.value });
   }
@@ -22,9 +17,6 @@ export default class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
     localStorage.setItem('localCity', JSON.stringify(this.state.location));
-
-    // Redirect user to home after submitting the location
-    this.context.router.push('/');
   }
 
   render() {
