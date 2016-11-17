@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { moodColor } from './components/good_day';
 
 export default class App extends Component {
   render() {
+    moodColor("great");
     return (
       <div>
         <div className="nav">

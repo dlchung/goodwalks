@@ -21,21 +21,23 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <label htmlFor="location-input">Your Location:</label>
-        <div className="input-group">
-          <input
-            placeholder="U.S. City e.g. Raleigh"
-            className="form-control"
-            id="location-input"
-            value={this.state.location}
-            onChange={this.onInputChange}
-          />
-          <span className="input-group-btn">
-            <button type="submit" className="btn btn-secondary">Submit</button>
-          </span>
-        </div>
-      </form>
+      <div className="form-wrap">
+        <form onSubmit={this.onFormSubmit}>
+          <label htmlFor="location-input">Your Location:</label>
+          <div className="input-group">
+            <input
+              placeholder="U.S. City e.g. Raleigh"
+              className="form-control"
+              id="location-input"
+              value={this.state.location}
+              onChange={this.onInputChange}
+            />
+            <span className="input-group-btn">
+              <button type="submit" className="btn btn-secondary">Submit</button>
+            </span>
+          </div>
+        </form>
+      </div>
     );
   }
 }
