@@ -4,7 +4,7 @@ import { moodColor } from './components/good_day';
 
 export default class App extends Component {
   render() {
-    moodColor("great");
+    moodColor(JSON.parse(localStorage.getItem('mood')));
     return (
       <div>
         <div className="nav">

@@ -30,10 +30,6 @@ export default class GoodDay extends Component {
     const temp = this.props.currentTemp;
     const lowTemp = 55;
     const highTemp = 85;
-    // const great = "great-weather";
-    // const hot = "hot-weather";
-    // const cold = "cold-weather";
-    // var mood = "";
 
     var walkText = "";
     const statusGreat = "It's a great day to walk!";
@@ -42,23 +38,16 @@ export default class GoodDay extends Component {
 
     if(temp > lowTemp && temp < highTemp) {
       walkText = statusGreat;
-      //mood = great;
       moodColor("great");
     }
     else if (temp > lowTemp){
       walkText = statusHot;
-      // mood = hot;
       moodColor("hot");
     }
     else {
       walkText = statusCold;
-      // mood = cold;
       moodColor("cold");
     }
-
-    //document.classList.remove(great, hot, cold);
-
-    //localStorage.setItem('mood', JSON.stringify(mood));
 
     return walkText;
   }
