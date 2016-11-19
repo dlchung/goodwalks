@@ -1,9 +1,4 @@
 @media all and (max-width: 25em) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
   .nav {
     font-size: 0.8em;
     padding: 10px;
@@ -15,7 +10,8 @@
 
   .settings-wrap {
     margin: 0 auto;
-    width: 70%;
+    padding-top: 20px;
+    width: 80%;
   }
 
   .weather-wrap {
@@ -25,28 +21,23 @@
 
     .weather-wrap .current-city {
       font-size: 5vw;
-      text-shadow: 1px 1px 1px #777;
+      text-shadow: 1px 1px 1px #999;
     }
 
     .weather-wrap .current-temp {
       font-size: 8vw;
       font-weight: bold;
-      text-shadow: 1px 1px 1px #777;
+      text-shadow: 1px 1px 1px #999;
     }
 
     .weather-wrap .walk-status {
       font-size: 7vw;
       font-weight: bold;
-      text-shadow: 1px 1px 1px #777;
+      text-shadow: 1px 1px 1px #999;
     }
 }
 
 @media all and (min-width: 25em) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
   .nav {
     font-size: 0.8em;
     padding: 10px;
@@ -58,7 +49,7 @@
 
   .settings-wrap {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
   }
 
   .weather-wrap {
@@ -67,29 +58,24 @@
   }
 
     .weather-wrap .current-city {
-      font-size: 5vw;
+      font-size: 4.5vw;
       text-shadow: 1px 1px 1px #777;
     }
 
     .weather-wrap .current-temp {
-      font-size: 8vw;
+      font-size: 7vw;
       font-weight: bold;
       text-shadow: 1px 1px 1px #777;
     }
 
     .weather-wrap .walk-status {
-      font-size: 7vw;
+      font-size: 6vw;
       font-weight: bold;
       text-shadow: 1px 1px 1px #777;
     }
 }
 
 @media all and (min-width: 50em) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
   .nav {
     font-size: 0.8em;
     padding: 10px;
@@ -130,6 +116,8 @@
 body {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
   -webkit-transition: background-color 1.0s ease-in-out;
   -moz-transition: background-color 1.0s ease-in-out;
   -o-transition: background-color 1.0s ease-in-out;
