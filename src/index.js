@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import routes from './routes';
 import './index.css';
+//import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import reducers from './reducers';
 

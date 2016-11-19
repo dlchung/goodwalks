@@ -130,6 +130,11 @@
 body {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
+  -webkit-transition: background-color 1.0s ease-in-out;
+  -moz-transition: background-color 1.0s ease-in-out;
+  -o-transition: background-color 1.0s ease-in-out;
+  -khtml-transition: background-color 1.0s ease-in-out;
+  transition: background-color 1.0s ease-in-out;
 }
 
 body.great-weather { background-color: #86c2a0; }
