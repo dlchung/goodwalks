@@ -1,3 +1,5 @@
+// Controls background color based on current mood/temperature.
+// Toggles appropriate classes located in index.css
 export function moodColor(mood) {
   var currentMood = "";
   const great = "great-weather";
@@ -19,7 +21,9 @@ export function moodColor(mood) {
       break;
   }
 
+  // Save mood in localStorage so we can show the correct mood between views
   localStorage.setItem('mood', JSON.stringify(mood));
+
   document.body.classList.remove(great, hot, cold);
   document.body.classList.add(currentMood);
 }

@@ -7,7 +7,9 @@ import GoodDay from './good_day';
 class WeatherNow extends Component {
   componentDidMount() {
     // localStorage.clear();
-    const defaultCityCoordinates = 0;
+    
+    // Set coordinates to Charlotte, NC if none is set
+    const defaultCityCoordinates = { lat: 35.2270869, lng: 80.84312669999997 };
     const coordinates = JSON.parse(localStorage.getItem('coordinates')) ? JSON.parse(localStorage.getItem('coordinates')) : defaultCityCoordinates;
 
     // Get new weather data when the page is loaded
@@ -15,7 +17,6 @@ class WeatherNow extends Component {
   }
 
   renderWeather(data) {
-    console.log(data);
     const cityName = JSON.parse(localStorage.getItem('locationLabel'));
 
     // Convert temperatures from Kelvin

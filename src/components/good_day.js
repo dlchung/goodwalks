@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { moodColor } from './mood_color';
 
+// Logic for determining what temperature is considered a "good day"
 export default class GoodDay extends Component {
   renderMood() {
     const temp = this.props.currentTemp;

@@ -22,7 +22,10 @@ export default class SearchBar extends Component {
   }
 
   onFormSubmit(event) {
+    // Stop default form behavior
     event.preventDefault();
+
+    // Save city name and city coordinates to localStorage
     localStorage.setItem('locationLabel', JSON.stringify(this.state.locationLabel));
     localStorage.setItem('coordinates', JSON.stringify(this.state.coordinates));
     this.setState({ textHelp: "Your settings have been saved." });
