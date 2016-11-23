@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
+import Geosuggest from 'react-geosuggest';
 
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      location: JSON.parse(localStorage.getItem('localCity')),
+      locationLabel: JSON.parse(localStorage.getItem('locationLabel')),
+      coordinates: '',
       textHelp: ''
     };
 
-    this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onSuggestSelect = this.onSuggestSelect.bind(this);
   }
 
-  onInputChange(event) {
-    this.setState({ location: event.target.value });
+  onSuggestSelect(event) {
+    console.log(event);
+    this.setState({ locationLabel: event.label });
+    this.setState({ coordinates: event.location });
   }
 
   onFormSubmit(event) {
     event.preventDefault();
-    localStorage.setItem('localCity', JSON.stringify(this.state.location));
-    this.setState({ textHelp : "Your location has been saved." });
+    localStorage.setItem('locationLabel', JSON.stringify(this.state.locationLabel));
+    localStorage.setItem('coordinates', JSON.stringify(this.state.coordinates));
+    this.setState({ textHelp: "Your settings have been saved." });
   }
 
   render() {
@@ -28,19 +33,15 @@ export default class SearchBar extends Component {
       <div className="form-wrap">
         <form onSubmit={this.onFormSubmit}>
           <label htmlFor="location-input">Your Location:</label>
-          <div className="input-group">
-            <input
-              placeholder="U.S. City e.g. Raleigh"
-              className="form-control"
-              id="location-input"
-              value={this.state.location}
-              onChange={this.onInputChange}
-            />
-            <span className="input-group-btn">
-              <button type="submit" className="btn btn-secondary">Save</button>
-            </span>
-          </div>
+          <Geosuggest
+            placeholder="Enter your location"
+            inputClassName="form-control"
+
+            types={['(regions)']}
+            onSuggestSelect={this.onSuggestSelect}
+          />
           <div className="text-help">{this.state.textHelp}</div>
+          <button type="submit" className="btn btn-secondary">Save</button>
         </form>
       </div>
     );

@@ -6,14 +6,17 @@ import GoodDay from './good_day';
 
 class WeatherNow extends Component {
   componentDidMount() {
-    const localCity = JSON.parse(localStorage.getItem('localCity')) ? JSON.parse(localStorage.getItem('localCity')) : "Raleigh";
+    // localStorage.clear();
+    const defaultCityCoordinates = 0;
+    const coordinates = JSON.parse(localStorage.getItem('coordinates')) ? JSON.parse(localStorage.getItem('coordinates')) : defaultCityCoordinates;
 
     // Get new weather data when the page is loaded
-    this.props.fetchWeather(localCity);
+    this.props.fetchWeather(coordinates);
   }
 
   renderWeather(data) {
-    const cityName = data.name;
+    console.log(data);
+    const cityName = JSON.parse(localStorage.getItem('locationLabel'));
 
     // Convert temperatures from Kelvin
     const currentTempF = (9 / 5 * (data.main.temp - 273.15) + 32).toFixed();

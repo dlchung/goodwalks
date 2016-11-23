@@ -87,7 +87,7 @@
 
   .settings-wrap {
     margin: 0 auto;
-    width: 70%;
+    width: 40%;
   }
 
   .weather-wrap {
@@ -147,3 +147,43 @@ body.cold-weather { background-color: #afdde0; }
 .weather-wrap {
   text-align: center;
 }
+
+.text-help {
+  padding: 10px 0;
+}
+
+/*
+geosuggest styling
+*/
+
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
+.geosuggest__item--active {
+  background: #267dc0;
+  color: #fff;
+}
+
+.geosuggest__suggests-wrapper {
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  color: #999;
+  margin: 0 1px;
+}
+
+.geosuggest__suggests {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.geosuggest__item {
+  padding: 5px 10px;
+}
+
+  .geosuggest__item:hover {
+    background: #267dc0;
+  }
