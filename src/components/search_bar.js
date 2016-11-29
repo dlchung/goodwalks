@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Geosuggest from 'react-geosuggest';
+import Geosuggest from 'react-geosuggest-material-ui';
+import FlatButton from 'material-ui/FlatButton';
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class SearchBar extends Component {
   }
 
   onSuggestSelect(event) {
-    console.log(event);
+    //console.log(event);
     this.setState({ locationLabel: event.label });
     this.setState({ coordinates: event.location });
   }
@@ -33,20 +34,16 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div className="form-wrap">
-        <form onSubmit={this.onFormSubmit}>
-          <label htmlFor="location-input">Your Location:</label>
-          <Geosuggest
-            placeholder="Enter your location"
-            inputClassName="form-control"
-
-            types={['(regions)']}
-            onSuggestSelect={this.onSuggestSelect}
-          />
-          <div className="text-help">{this.state.textHelp}</div>
-          <button type="submit" className="btn btn-secondary">Save</button>
-        </form>
-      </div>
+      <form onSubmit={this.onFormSubmit}>
+        <label htmlFor="location-input">Your Location:</label>
+        <Geosuggest
+          placeholder="Enter your location"
+          types={['(regions)']}
+          onSuggestSelect={this.onSuggestSelect}
+        />
+        <div className="text-help">{this.state.textHelp}</div>
+        <FlatButton label="Save Settings" type="submit" />
+      </form>
     );
   }
 }
