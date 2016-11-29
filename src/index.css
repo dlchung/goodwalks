@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
 @media all and (max-width: 25em) {
   .nav {
     font-size: 0.8em;
@@ -26,13 +28,11 @@
 
     .weather-wrap .current-temp {
       font-size: 8vw;
-      font-weight: bold;
       text-shadow: 1px 1px 1px #999;
     }
 
     .weather-wrap .walk-status {
       font-size: 7vw;
-      font-weight: bold;
       text-shadow: 1px 1px 1px #999;
     }
 }
@@ -64,13 +64,11 @@
 
     .weather-wrap .current-temp {
       font-size: 7vw;
-      font-weight: bold;
       text-shadow: 1px 1px 1px #777;
     }
 
     .weather-wrap .walk-status {
       font-size: 6vw;
-      font-weight: bold;
       text-shadow: 1px 1px 1px #777;
     }
 }
@@ -102,20 +100,18 @@
 
     .weather-wrap .current-temp {
       font-size: 3.5em;
-      font-weight: bold;
       text-shadow: 1px 1px 2px #777;
     }
 
     .weather-wrap .walk-status {
       font-size: 3em;
-      font-weight: bold;
       text-shadow: 1px 1px 2px #777;
     }
 }
 
 body {
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-transition: background-color 1.0s ease-in-out;
