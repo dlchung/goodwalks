@@ -5,8 +5,11 @@ import { moodColor } from './mood_color';
 export default class GoodDay extends Component {
   renderMood() {
     const temp = this.props.currentTemp;
-    const lowTemp = 55;
-    const highTemp = 85;
+    const lowTemp = JSON.parse(localStorage.getItem('lowTemp')) ? JSON.parse(localStorage.getItem('lowTemp')) : 55;
+    const highTemp = JSON.parse(localStorage.getItem('highTemp')) ? JSON.parse(localStorage.getItem('highTemp')) : 85;
+
+    localStorage.setItem('lowTemp', lowTemp);
+    localStorage.setItem('highTemp', highTemp);
 
     var walkText = "";
     const statusGreat = "It's a great day to walk!";
