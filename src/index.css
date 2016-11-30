@@ -125,6 +125,10 @@ body.great-weather { background-color: #86c2a0; }
 body.hot-weather { background-color: #e7b685; }
 body.cold-weather { background-color: #afdde0; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 .root {
   position: relative;
 }
